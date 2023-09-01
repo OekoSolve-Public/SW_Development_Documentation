@@ -20,7 +20,7 @@ The widget editor contains of five main section.
 - `Settings schema`
 - Widget preview
 
-![Widget Editor](images/image-11.png)
+![Widget Editor](https://raw.githubusercontent.com/OekoSolve-Public/SW_Development_Documentation/main/_images/widget_editor.png)
 
 #### Widget Editor Toolbar section
 
@@ -37,15 +37,15 @@ The widget editor toolbar consists of the following items in the order from left
 
 The first tab `Resources` is used to define external `JavaScript` or `CSS` dependencies used by the widget
 
-![Resources](images/image-12.png)
+![Resources](https://raw.githubusercontent.com/OekoSolve-Public/SW_Development_Documentation/main/_images/resources.png)
 
 The second tab `HTML` contains the widget `HTML` code, that decides how the widget is displayed. Can be empty, if the content is created dynamically.
 
-![HTML](images/image-13.png)
+![HTML](https://raw.githubusercontent.com/OekoSolve-Public/SW_Development_Documentation/main/_images/html.png)
 
 The last tab in this section is the `CSS` tab, that decies how the `HTML` code should be styled.
 
-![CSS](images/image-14.png)
+![CSS](https://raw.githubusercontent.com/OekoSolve-Public/SW_Development_Documentation/main/_images/css.png)
 
 #### `JavaScript` section
 
@@ -89,7 +89,7 @@ To know what to put into the `Settings schema`, the easiest way is to use the [R
 
 The second tab `Data key settings schema` is used to specify the displayed settings for the `Advanced` tab of the data key settings. The `.json` format is the same as for `Settings schema`.
 
-![Data key advanced](images/image-15.png)
+![Data key advanced](https://raw.githubusercontent.com/OekoSolve-Public/SW_Development_Documentation/main/_images/data_key_advanced.png)
 
 Getting the configuration however is slightly different, because the configuration can be different for every single `data key` that is given by the entered `data source`.
 
@@ -107,7 +107,7 @@ function init() {
 
 This section allows to preview how to widget would be displayed on the [`Dashboard`](https://thingsboard.io/docs/user-guide/dashboards/). The only limitation is that the only `data source` that can be selected is a `Function`.
 
-![Preview](images/image-16.png)
+![Preview](https://raw.githubusercontent.com/OekoSolve-Public/SW_Development_Documentation/main/_images/preview.png)
 
 ### API
 
@@ -273,7 +273,7 @@ The important thing is to remember that those access right do not mean that thos
 
 The specific roles mentioned above might ring a bell, especially if you previously worked with `ThingsBoard Roles`. Because nearly all permissions mentioned above can be added to a `Role` that can then be assigned to a [`User`](https://thingsboard.io/docs/user-guide/ui/users/). This is especially helpful if the `Rest API` is called but failed, because the [`User`](https://thingsboard.io/docs/user-guide/ui/users/) does not have the correct permissions to execute that `Rest API` call.
 
-![Roles](images/image-9.png)
+![Roles](https://raw.githubusercontent.com/OekoSolve-Public/SW_Development_Documentation/main/_images/roles.png)
 
 -------------------
 

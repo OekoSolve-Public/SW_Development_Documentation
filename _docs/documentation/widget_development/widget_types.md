@@ -13,19 +13,20 @@ Widget type decide what kind of data we receive and what we can do with it.
 
 The important thing to understand tough is that all widgets can execute any arbitrary `Rest API` call, over so called `Services`, which are described in the `Basic Widget API`, `Services` section.
 
-![Widget Types](images/image.png)
+![Widget Types](https://raw.githubusercontent.com/OekoSolve-Public/SW_Development_Documentation/main/_images/widget_types.png)
 
 ### Time series
 
 The first one is `Time Series`, which display historical values for a selected period of time and therefore always include the option to enable their own `time window`.
 
-![History button](images/image-1.png)
+![History button](https://raw.githubusercontent.com/OekoSolve-Public/SW_Development_Documentation/main/_images/history_button.png)
 
-![History](images/image-2.png)
+![History UI](https://raw.githubusercontent.com/OekoSolve-Public/SW_Development_Documentation/main/_images/history_ui.png)
+
 
 The `data` that can be accessed is passed over `data sources`, which are [`Entities`](https://thingsboard.io/docs/user-guide/entities-and-relations/) and then additionally the `data keys` that should be accessible.
 
-![Data source](images/image-3.png)
+![Data source](https://raw.githubusercontent.com/OekoSolve-Public/SW_Development_Documentation/main/_images/data_source.png)
 
 Thoose values and the assigned [`Entity`](https://thingsboard.io/docs/user-guide/entities-and-relations/) can then be accessed, read and used to display or do other things in the widget itself.
 
@@ -123,8 +124,7 @@ Widgets that are specifically made to send [`Remote Procedure Call`](https://thi
 
 This [`device`](https://thingsboard.io/docs/user-guide/ui/devices/) has to be set for the widget to work correclty, not unlike the `Latest Values` and `Time Series` widgets.
 
-![Target device](images/image-4.png)
-
+![Target device](https://raw.githubusercontent.com/OekoSolve-Public/SW_Development_Documentation/main/_images/target_device.png)
 
 The access to the `RPC commands` is done over the `controlApi` component.
 
@@ -182,7 +182,7 @@ But compared to the other widget this is not meant to display data directly, but
 
 [Alarms](https://thingsboard.io/docs/user-guide/alarms/) can be most easily configured on a [Device Profile](https://thingsboard.io/docs/user-guide/device-profiles/), if certain conditions are met. For example the temperature in a critical component rising to a very high temperature.
 
-![Device Profile alarm rules](images/image-5.png)
+![Device Profile alarm rules](https://raw.githubusercontent.com/OekoSolve-Public/SW_Development_Documentation/main/_images/alarm_rules.png)
 
 #### Action source
 
@@ -192,7 +192,7 @@ The `Action sources` supported by this widget type are:
 
 - `Action cell button` (The new button in all rows with [`Entities`](https://thingsboard.io/docs/user-guide/entities-and-relations/) is pressed)
 
-![Action cell button](images/image-8.png)
+![Action cell button](https://raw.githubusercontent.com/OekoSolve-Public/SW_Development_Documentation/main/_images/action_cell_button.png)
 
 - `Widget header button` (The new button with the given icon, on the top right of the widget is pressed)
 
@@ -200,7 +200,7 @@ The `Action sources` supported by this widget type are:
 
 Unlike all other widget types, `static` widgets do not use any `data source` and simply offer the possiblity to create and opponent with custom `HTML` and `CSS` code.
 
-![Action](images/image-6.png)
+![Actions section](https://raw.githubusercontent.com/OekoSolve-Public/SW_Development_Documentation/main/_images/actions_section.png)
 
 This does not mean this component can be underestimated tough, because it is the component with the most flexiblity when referring to `Action sources`.
 

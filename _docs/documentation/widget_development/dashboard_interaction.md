@@ -14,7 +14,7 @@ When a widget is added to a [`Dashboard`](https://thingsboard.io/docs/user-guide
 
 When right-clicking in edit mode on a widget it is possible to either enter edit mode, copy the widget, copy the reference to the widget or delete it.
 
-![Widget context](images/image-17.png)
+![Widget context](https://raw.githubusercontent.com/OekoSolve-Public/SW_Development_Documentation/main/_images/widget_context.png)
 
 The most important thing to understand is the difference between `Copy` and `Copy Reference`.
 
@@ -36,7 +36,7 @@ Especially interesting is the possiblity, when data keys have been added and `Th
 
 This allows to execute arbitrary `JavaScript` code before the value is displayed on the widget.
 
-![Data key configuration](images/image-10.png)
+![Data key configuration](https://raw.githubusercontent.com/OekoSolve-Public/SW_Development_Documentation/main/_images/data_key_config.png)
 
 Additionally for the `data post-processing`, these parameters are passed. 
 
@@ -109,7 +109,7 @@ The `actions` tab contains the possible type of `action` that can happen when in
 
 - `Navigate to new dashboard state` (Opens the given [`dashboard state`](https://thingsboard.io/docs/user-guide/dashboards/#states) as a subdashboard, meaning it is displayed like below, and allows jumping back to the dashboard that we were originally in)
 
-![Subdashboard](images/image-7.png)
+![Subdashboard](https://raw.githubusercontent.com/OekoSolve-Public/SW_Development_Documentation/main/_images/sub_dashboard.png)
 
 - `Update current dashboard state` (Opens the given [`dashboard state`](https://thingsboard.io/docs/user-guide/dashboards/#states) directly, meaning it will not be able to jump back like with the `Navigate to new dashboard state` option)
 
