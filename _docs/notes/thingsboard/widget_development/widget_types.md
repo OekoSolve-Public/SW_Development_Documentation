@@ -3,6 +3,8 @@ layout: default
 title: Widget Types
 parent: Widget Development
 grand_parent: ThingsBoard
+nav_order: 2
+grand_grand_parent: Documentation
 ---
 
 ## Widget Types

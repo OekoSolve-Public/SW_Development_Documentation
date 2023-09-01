@@ -3,6 +3,8 @@ layout: default
 title: Basic Widget API
 parent: Widget Development
 grand_parent: ThingsBoard
+nav_order: 3
+grand_grand_parent: Documentation
 ---
 
 ## Basic Widget API

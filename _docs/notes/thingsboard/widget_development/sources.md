@@ -3,6 +3,8 @@ layout: default
 title: Sources
 parent: Widget Development
 grand_parent: ThingsBoard
+nav_order: 6
+grand_grand_parent: Documentation
 ---
 
 ## Sources
