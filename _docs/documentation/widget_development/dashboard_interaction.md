@@ -101,7 +101,7 @@ This setting can be ignored most of the time, besides the title which per defaul
 
 ### Advanced
 
-The `advanced` tab can be completly barren or the most important section of the widget, this is the case because this section is configured by the widget creator itself. The `Basic Widget API`, `Widget Editor overview` section contains more information.
+The `advanced` tab can be completly barren or the most important section of the widget, this is the case because this section is configured by the widget creator itself, mentioned in more detail [here](https://oekosolve-public.github.io/SW_Development_Documentation/docs/documentation/widget_development/basic_widget_api/#widget-editor-overview).
 
 ### Actions
 

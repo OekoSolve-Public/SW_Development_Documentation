@@ -49,7 +49,7 @@ The last tab in this section is the `CSS` tab, that decies how the `HTML` code s
 
 #### `JavaScript` section
 
-This section contains the `JavaScript` code that should be executed when a user interacts with the widget, everything mentioned in the `Basic Widget API`, `API` section can be done here.
+This section contains the `JavaScript` code that should be executed when a user interacts with the widget, everything mentioned in more detail [here](https://oekosolve-public.github.io/SW_Development_Documentation/docs/documentation/widget_development/basic_widget_api/#api) can be done.
 
 #### Settings schema section
 
@@ -151,8 +151,8 @@ This can not be done directly, the interaction is handled over `services` that e
 
 To see all possible `Rest API` calls for the client [Swagger UI](https://<TB_PE_PAGE_LINK>/swagger-ui) can be accessed. Most of the `controller` mentioned can be found as `<controller-name>.service.ts` in the GitHub repository under the [ui-ngx/src/app/core/http](https://github.com/thingsboard/thingsboard/blob/master/ui-ngx/src/app/core/http) folder.
 
-[!WARNING]
-Be aware tough, some calls might only be included in the `ThingsBoard Professional Edition`, if that is the case the implementation will not be visible in the GitHub repository [ui-ngx/src/app/core/http](https://github.com/thingsboard/thingsboard/blob/master/ui-ngx/src/app/core/http) folder. If that is the case  the `Basic Widget API`, `Services`, `Using ThingsBoard Professional Edition only Widget features` section contains more information on how this can be mitigated.
+{: .warning }
+If no implemented method could be found check the [`ThingsBoard Community Rest API`](https://demo.thingsboard.io/swagger-ui/), that contains only calls that exist for `ThingsBoard Community Edition`. Because if your call exists only on `ThingsBoard Professional Edition`, you will not find it in the GitHub repository [folder](https://github.com/thingsboard/thingsboard/blob/master/ui-ngx/src/app/core/http/) and also not in the `Rest API`. If that is the case the process to mitigate this issue is mentioned in more detail [here](https://oekosolve-public.github.io/SW_Development_Documentation/docs/documentation/widget_development/basic_widget_api/#using-thingsboard-professional-edition-only-widget-features)
 
 When having a closer look at the method implementation the specific `Rest API` call used can be deduced by the `URL`.
 

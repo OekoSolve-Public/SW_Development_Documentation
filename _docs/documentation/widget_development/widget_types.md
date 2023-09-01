@@ -11,7 +11,7 @@ nav_order: 2
 First of all we will have a look at what type of widgets can even be created, every one of them has its own drawbacks and advantages and are designed for specific use cases.
 Widget type decide what kind of data we receive and what we can do with it.
 
-The important thing to understand tough is that all widgets can execute any arbitrary `Rest API` call, over so called `Services`, which are described in the `Basic Widget API`, `Services` section.
+The important thing to understand tough is that all widgets can execute any arbitrary `Rest API` call, over so called `Services`, mentioned in more detail [here](https://oekosolve-public.github.io/SW_Development_Documentation/docs/documentation/widget_development/basic_widget_api/#services).
 
 ![Widget Types](https://raw.githubusercontent.com/OekoSolve-Public/SW_Development_Documentation/main/_images/widget_types.png)
 
@@ -94,7 +94,7 @@ If it makes no sense to accept more than one [`Entity`](https://thingsboard.io/d
 
 #### Action source
 
-`Action source` means any interaction by a user on a widget, like pressing a button, row or even a header, these interactions can then be used to execute certain `actions` mentioned in the `Dashboard Widget Interaction`, `Action` section.
+`Action source` means any interaction by a user on a widget, like pressing a button, row or even a header, these interactions can then be used to execute certain `actions` mentioned in more detail [here](https://oekosolve-public.github.io/SW_Development_Documentation/docs/documentation/widget_development/dashboard_interaction/#actions).
 
 The `Action sources` supported by this widget type are:
 
@@ -108,7 +108,7 @@ This is the case, because as the name implies this widget is only meant to fetch
 
 #### Action source
 
-`Action source` means any interaction by a user on a widget, like pressing a button, row or even a header, these interactions can then be used to execute certain `actions` mentioned in the `Dashboard Widget Interaction`, `Action` section.
+`Action source` means any interaction by a user on a widget, like pressing a button, row or even a header, these interactions can then be used to execute certain `actions` mentioned in more detail [here](https://oekosolve-public.github.io/SW_Development_Documentation/docs/documentation/widget_development/dashboard_interaction/#actions).
 
 The `Action sources` supported by this widget type are:
 
@@ -168,7 +168,7 @@ self.onDestroy = function() {
 
 #### Action source
 
-`Action source` means any interaction by a user on a widget, like pressing a button, row or even a header, these interactions can then be used to execute certain `actions` mentioned in the `Dashboard Widget Interaction`, `Action` section.
+`Action source` means any interaction by a user on a widget, like pressing a button, row or even a header, these interactions can then be used to execute certain `actions` mentioned in more detail [here](https://oekosolve-public.github.io/SW_Development_Documentation/docs/documentation/widget_development/dashboard_interaction/#actions).
 
 The `Action sources` supported by this widget type are:
 
@@ -186,7 +186,7 @@ But compared to the other widget this is not meant to display data directly, but
 
 #### Action source
 
-`Action source` means any interaction by a user on a widget, like pressing a button, row or even a header, these interactions can then be used to execute certain `actions` mentioned in the `Dashboard Widget Interaction`, `Action` section.
+`Action source` means any interaction by a user on a widget, like pressing a button, row or even a header, these interactions can then be used to execute certain `actions` mentioned in more detail [here](https://oekosolve-public.github.io/SW_Development_Documentation/docs/documentation/widget_development/dashboard_interaction/#actions).
 
 The `Action sources` supported by this widget type are:
 
@@ -206,7 +206,7 @@ This does not mean this component can be underestimated tough, because it is the
 
 #### Action source
 
-`Action source` means any interaction by a user on a widget, like pressing a button, row or even a header, these interactions can then be used to execute certain `actions` mentioned in the `Dashboard Widget Interaction`, `Action` section.
+`Action source` means any interaction by a user on a widget, like pressing a button, row or even a header, these interactions can then be used to execute certain `actions` mentioned in more detail [here](https://oekosolve-public.github.io/SW_Development_Documentation/docs/documentation/widget_development/dashboard_interaction/#actions).
 
 The `Action sources` supported by this widget type are:
 
