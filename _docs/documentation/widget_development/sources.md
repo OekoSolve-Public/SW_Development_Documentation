@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Sources
-parent: Widget Development
-grand_parent: ThingsBoard
+parent: ThingsBoard Widget Development
+grand_parent: Documentation
 nav_order: 6
 ---
 

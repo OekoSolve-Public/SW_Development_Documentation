@@ -1,10 +1,9 @@
 ---
 layout: default
 title: Creating a Widget
-parent: Widget Development
-grand_parent: ThingsBoard
+parent: ThingsBoard Widget Development
+grand_parent: Documentation
 nav_order: 5
-grand_grand_parent: Documentation
 ---
 
 ## Creating a Widget

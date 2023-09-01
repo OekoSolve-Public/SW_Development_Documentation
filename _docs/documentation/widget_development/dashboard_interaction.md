@@ -1,10 +1,9 @@
 ---
 layout: default
 title: Dashboard Widget Interaction
-parent: Widget Development
-grand_parent: ThingsBoard
+parent: ThingsBoard Widget Development
+grand_parent: Documentation
 nav_order: 4
-grand_grand_parent: Documentation
 ---
 
 ## Dashboard Widget Interaction

@@ -2,7 +2,7 @@ title: SW Development Documentation
 color_scheme: dark
 
 # Build settings
-remote_theme: pdmosses/just-the-docs@rec-nav
+remote_theme: pmarsceill/just-the-docs
 #theme: "just-the-docs"
 
 # Enable or disable the site search
