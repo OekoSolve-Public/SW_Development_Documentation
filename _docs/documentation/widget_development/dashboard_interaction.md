@@ -58,7 +58,7 @@ if (prevOrigValue) {
 }
 ```
 
--------------------
+#### Advanced data key configuration
 
 Furthermore the `advanced` tab under the `data key` tab allows to change even more settings about the `data key`. Configuration mentioned below only exists with the `Entities table` widget, but other widgets might contain more configuration about the `data key` as well.
 

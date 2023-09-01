@@ -250,7 +250,7 @@ Once the correct method has been deduced the `parameters` needed to be passed to
 
 If the `Rest API` call additional expects a `request body` that will simply the last element as an optional.
 
--------------------
+### Roles
 
 The important thing is to remember that those access right do not mean that those actions can be executed on every device. The executing user still has to have access to the given [`Entity`](https://thingsboard.io/docs/user-guide/entities-and-relations/), meaning he has to have created it, it has to be assigned to him or it has to have been shared with him.
 
@@ -275,8 +275,6 @@ The specific roles mentioned above might ring a bell, especially if you previous
 
 ![Roles](https://raw.githubusercontent.com/OekoSolve-Public/SW_Development_Documentation/main/_images/roles.png)
 
--------------------
-
 The specific credentials required authorization and `HTTPS` call type of each method in the services can be found as `<controller-name>Controller.java` in the GitHub repository under the [application/src/main/java/org/thingsboad/server/controller](https://github.com/thingsboard/thingsboard/tree/master/application/src/main/java/org/thingsboard/server/controller) folder.
 
 ```java
@@ -298,7 +296,7 @@ public Device getDeviceById(@ApiParam(value = DEVICE_ID_PARAM_DESCRIPTION)
 
 Especially important are the `@PreAuthorize`, `@RequestMapping` and `Operation.<PERMISSION>` section., which describe the type of user that is allowed to execute the action, the `URL` the `Rest API` call is mapped too and the operation permission to execute that action.
 
--------------------
+### Implementation
 
 Now that we have had a closer look at the permission required to execute methods on services and where to find what kind of calls we can even execute. The next things is to actually implement them.
 
