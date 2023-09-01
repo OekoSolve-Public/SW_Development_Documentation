@@ -2,6 +2,7 @@
 layout: default
 title: Widget Development
 parent: ThingsBoard
+grand_parent: Documentation
 has_children: true
 ---
 

@@ -180,7 +180,7 @@ If that is the case the only way to find out if the `controller` is implemented 
 
 Additional auto complete in the `Widget Editor` is also borked for thoose `ThingsBoard Professional Edition` only `services` so the methods need to be found out another way.
 
-This is possible with the below code, simply enter the name of the `service` class, which we want to call the methods on. Once executed in the `Widget` it will print all existing `methods` on that object.
+This is possible with the below code, simply enter the name of the `service` class, which we want to call the methods on. Once executed in the `Widget` it will print all existing `methods` on that object. Original code can be found here [How to list object methods javascript](https://flaviocopes.com/how-to-list-object-methods-javascript).
 
 ```javascript
 console.log(getMethods("<TB_PE_ONLY_WIDGET_SERVICE_NAME>"))
