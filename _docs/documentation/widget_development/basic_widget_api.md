@@ -177,12 +177,14 @@ Some `services` only exist in the `ThingsBoard Professional Edition`, because th
 
 If that is the case the only way to find out if the `controller` is implemented is trying to guess the `service` name from the name it has in the `Rest API`.
 
-Additional auto complete in the `Widget Editor` is also borked for thoose `ThingsBoard Professional Edition` only `services` so the methods need to be found out another way.
+Additional auto complete in the `Widget Editor` is also borked for those `ThingsBoard Professional Edition` only `services` so the methods need to be found out in another way. There are multiple methods even though one of them is easier than the other.
 
-This is possible with the below code, simply enter the name of the `service` class, which we want to call the methods on. Once executed in the `Widget` it will print all existing `methods` on that object. Original code can be found here [How to list object methods javascript](https://flaviocopes.com/how-to-list-object-methods-javascript).
+##### Deduce method by JavaScript
+
+If simply getting all method name of the object suffice and the parameters are already known or can be deduced by the `Rest API` call, then the below code will do just that, simply enter the name of the `service` class, which we want to call the methods on. Once executed in the `Widget` it will print all existing `methods` on that object. Original code can be found here [How to list object methods javascript](https://flaviocopes.com/how-to-list-object-methods-javascript).
 
 ```javascript
-console.log(getMethods("<TB_PE_ONLY_WIDGET_SERVICE_NAME>"))
+console.log(getMethods("self.ctx.<TB_PE_ONLY_WIDGET_SERVICE_NAME>"))
 
 const getMethods = (obj) => {
   let properties = new Set();
@@ -246,9 +248,33 @@ entityGroupController.getEntityGroupAllByOwnerId();
 // Rest API: https://<TB_PE_PAGE_LINK>/swagger-ui/#/entity-group-controller/getEntityGroupAllByOwnerAndTypeUsingGET
 ```
 
-Once the correct method has been deduced the `parameters` needed to be passed to the `Rest API` can be used, normally the order and the argument the `service` method accepts are exactly the same.
+Once the correct `method` has been deduced the `parameters` needed to be passed to the `Rest API` can be used, normally the order and the argument the `service` `method` accepts are exactly the same.
 
 If the `Rest API` call additional expects a `request body` that will simply the last element as an optional.
+
+##### Deduce method by Java
+
+If however the aforementioned `method` does not lead to the wanted results, this can be the case if a `request body` is used and the `Schema` section does not include all comments and cut some of the relevant documentation, making filling out the `request body` impossible.
+
+Then the `method` below can solve that issue, for that however we need to decompile the `ThingsBoard Professional Edition` backend only code. Thanks to the backend being `Java` and no [obfuscation](https://www.techtarget.com/searchsecurity/definition/obfuscation) being used the code can be read more easily though, which can then help deduce the actual `parameters` that need to be passed as well as the `method` name.
+
+The first step is downloading the open source [Java Decompiler](https://java-decompiler.github.io/) the source code can be found in the [GitHub repository](https://github.com/java-decompiler/jd-gui).
+
+Once that has been done the next step is downloading the [`.deb` package](https://thingsboard.io/docs/user-guide/install/pe/ubuntu/#step-9-install-thingsboard-webreport-component) that contains the needed compiled source code.
+
+Simply copy the debian package name `https://dist.thingsboard.io/tb-web-report-<TB_PE_VERSION>.deb`, but change the `<TB_PE_VERSION>` to the version your `ThingsBoard` instance is using for example `3.5.1pe`.
+
+Then open that link directly and a download of the `.deb` file should start, as soon as the download process is finished, the archive needs to be extracted. This can be done with a tool like [7-Zip](https://www.7-zip.org/).
+
+Once that is done the `thingsboard-<TB_PE_VERSION>`, should contain a `data.tar` file, that archive needs to be extracted again. Once that final step has been completed we can open the newly extracted folder and under `thingsboard-<TB_PE_VERSION>\data\usr\share\thingsboard\bin` we should find the `thingsboard.jar` file.
+
+We can then open the previously installed Java Decompiler and then drag and drop the `thingsboard.jar` file into it. The easiest way to find the method that is also in the `Rest API` is searching for the name of the `controller` in the `Rest API`, but writing it together as one so `Entity Group Controller`, becomes the `class EntityGroupController`.
+
+![Java Decompiler search](https://raw.githubusercontent.com/OekoSolve-Public/SW_Development_Documentation/main/_images/java_decompiler_search.png)
+
+On that `class` the `Rest API` call string following the text after `/api` meaning `/entityGroup/{entityGroupId}/share`, can be searched for. Once the method has been found the documentation can be read, especially interesting is the `class` of the `request body`, which can simply be opened with CTRL + CLICK and then allows to read the documentation, which should also be displayed on the [Swagger UI](https://<TB_PE_PAGE_LINK>/swagger-ui).
+
+If either the `controller` or the `method` could not be found that means that `method` or `service` is not implemented, meaning another way to do the same thing might have to be used or that it is impossible to do with Widgets.
 
 ### Roles
 
@@ -322,7 +348,7 @@ function init() {
 }
 ```
 
-We can now execute any of the previously found methods in the [`device.service.ts`](https://github.com/thingsboard/thingsboard/blob/master/ui-ngx/src/app/core/http/device.service.ts). Be aware tough `ThingsBoard` uses `Angular` under the hood meaning we do not block and then receive the result directly from the method, but instead work with a kind of promise.
+We can now execute any of the previously found methods in the [`device.service.ts`](https://github.com/thingsboard/thingsboard/blob/master/ui-ngx/src/app/core/http/device.service.ts). Be aware though `ThingsBoard` uses `Angular` under the hood meaning we do not block and then receive the result directly from the method, but instead work with a kind of promise.
 
 Meaning we can `subscribe` a `success` and `failure` method and those will be called once the method has `failed` or `succeded` to execute the given `Rest API` call.
 
